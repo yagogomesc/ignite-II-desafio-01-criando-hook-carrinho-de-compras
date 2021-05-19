@@ -108,7 +108,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         return;
       }
 
-      if (productExists) {
+      if (productExists && amount != 0) {
         productExists.amount = amount;
       } else {
         throw Error();
